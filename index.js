@@ -53,3 +53,4 @@ startApp();
 
 const { viewDepartments, addDepartment } = require("./lib/departments");
 const { viewRoles, addRole } = require("./lib/roles");
+const { viewEmployees, addEmployee } = require("./lib/employees");
