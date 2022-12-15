@@ -7,6 +7,7 @@ VALUES
 ('Warehouse');
 
 INSERT INTO roles (title, salary, department_id)
+INSERT INTO roles (title, salary, department_id)
 VALUES
 ('Manager', 100000, NULL),
 ('Lead Salesperson', 80000, 1),
