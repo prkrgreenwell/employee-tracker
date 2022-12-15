@@ -52,3 +52,4 @@ module.exports = { startApp };
 startApp();
 
 const { viewDepartments, addDepartment } = require("./lib/departments");
+const { viewRoles, addRole } = require("./lib/roles");
