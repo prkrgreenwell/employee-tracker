@@ -29,6 +29,8 @@ When you call the program an inquirer screen is opened.
 ![image](./assets/main_menu.png)
 You can complete any function using your keyboard and following the prompts.
 ![image](./assets/employee_table.png)
+An example video of the program running can be found with this link.
+https://watch.screencastify.com/v/HwAiVtjetUJYz68QCd1E
 
 ## License
 
