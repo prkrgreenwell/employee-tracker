@@ -8,28 +8,30 @@ VALUES
 
 INSERT INTO roles (title, salary, department_id)
 VALUES
-('Manager', 100000, NULL),
-('Lead Salesperson', 80000, 1),
+('Regional Manager', 100000, NULL),
 ('Salesperson', 60000, 1),
-('Head Accountant', 75000, 2),
 ('Accountant', 65000, 2),
 ('Human Resource Rep', 72000, 3),
 ('Customer Service Rep', 76000, 4),
-('Warehouse Foreman', 55000, 5),
 ('Warehouse Worker', 45000, 5);
 
 
-INSERT INTO employees (first_name, last_name, role_id)
+INSERT INTO employees (first_name, last_name, role_id, manager_id, manager_confirm)
 VALUES
-('Michael', 'Scott', 1),
-('Dwight', 'Schrute', 3),
-('Jim', 'Halpert', 2),
-('Andy', 'Bernard', 3),
-('Kelly', 'Kapoor', 7),
-('Kevin', 'Malone', 5),
-('Angela', 'Martin', 4),
-('Oscar', 'Martinez', 5),
-('Toby', 'Flenderson', 6),
-('Darryl', 'Philbin', 8),
-('Roy', 'Anderson', 9),
-('Hidetoshi', 'Hasagawa', 9);
+('Michael', 'Scott', 1, NULL, true),
+('Dwight', 'Schrute', 2, 2, false),
+('Jim', 'Halpert', 2, NULL, true),
+('Andy', 'Bernard', 2, 2, false),
+('Kelly', 'Kapoor', 5, NULL, true),
+('Kevin', 'Malone', 3, 4, false),
+('Angela', 'Martin', 3, NULL, true),
+('Oscar', 'Martinez', 3, 4, false),
+('Toby', 'Flenderson', 4, NULL, true),
+('Darryl', 'Philbin', 6, NULL, true),
+('Roy', 'Anderson', 6, 6, false),
+('Hidetoshi', 'Hasagawa', 6, 6, false);
+
+INSERT INTO managers(first_name, last_name)
+SELECT first_name, last_name
+FROM employees
+WHERE manager_confirm = 1;
