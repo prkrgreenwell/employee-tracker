@@ -49,8 +49,13 @@ const startApp = () => {
 
 module.exports = { startApp };
 
+console.log("Welcome to the Employee Manager");
 startApp();
 
 const { viewDepartments, addDepartment } = require("./lib/departments");
 const { viewRoles, addRole } = require("./lib/roles");
-const { viewEmployees, addEmployee } = require("./lib/employees");
+const {
+  viewEmployees,
+  addEmployee,
+  updateEmployeeRole,
+} = require("./lib/employees");
