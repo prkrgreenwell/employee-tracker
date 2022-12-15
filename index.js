@@ -1,7 +1,6 @@
 /** @format */
 
 const inquirer = require("inquirer");
-const table = require("console.table");
 
 const startApp = () => {
   inquirer
@@ -17,6 +16,7 @@ const startApp = () => {
         "Add a Role",
         "Add an Employee",
         "Update an Employee Role",
+        "I'm Finished",
       ],
     })
     .then((ans) => {
@@ -41,6 +41,9 @@ const startApp = () => {
       if (ans.action === "Update an Employee Role") {
         updateEmployeeRole();
       }
+      if (ans.action === "I'm Finished") {
+        console.log("Good-Bye");
+      }
     });
 };
 
@@ -48,4 +51,4 @@ module.exports = { startApp };
 
 startApp();
 
-const { viewDepartments } = require("./lib/departments");
+const { viewDepartments, addDepartment } = require("./lib/departments");
