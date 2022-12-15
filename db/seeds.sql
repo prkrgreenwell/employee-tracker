@@ -6,29 +6,30 @@ VALUES
 ('Customer Service'),
 ('Warehouse');
 
-INSERT INTO roles (name, salary, department_id)
+INSERT INTO roles (title, salary, department_id)
 VALUES
 ('Manager', 100000, NULL),
-('Salesperson', 60000, 1),
 ('Lead Salesperson', 80000, 1),
-('Accountant', 65000, 2),
+('Salesperson', 60000, 1),
 ('Head Accountant', 75000, 2),
-('Human Resource Representative', 72000, 3),
-('Customer Service Representative', 76000, 4),
-('Warehouse Worker', 45000, 5),
-('Warehouse Head', 55000, 5);
+('Accountant', 65000, 2),
+('Human Resource Rep', 72000, 3),
+('Customer Service Rep', 76000, 4),
+('Warehouse Foreman', 55000, 5),
+('Warehouse Worker', 45000, 5);
+
 
 INSERT INTO employees (first_name, last_name, role_id)
 VALUES
 ('Michael', 'Scott', 1),
-('Dwight', 'Schrute', 2),
-('Jim', 'Halpert', 3),
-('Andy', 'Bernard', 2),
+('Dwight', 'Schrute', 3),
+('Jim', 'Halpert', 2),
+('Andy', 'Bernard', 3),
 ('Kelly', 'Kapoor', 7),
-('Kevin', 'Malone', 4),
-('Angela', 'Martin', 5),
-('Oscar', 'Martinez', 4),
+('Kevin', 'Malone', 5),
+('Angela', 'Martin', 4),
+('Oscar', 'Martinez', 5),
 ('Toby', 'Flenderson', 6),
-('Darryl', 'Philbin', 9),
-('Roy', 'Anderson', 8),
-('Hidetoshi', 'Hasagawa', 8);
+('Darryl', 'Philbin', 8),
+('Roy', 'Anderson', 9),
+('Hidetoshi', 'Hasagawa', 9);
